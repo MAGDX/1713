@@ -12,7 +12,7 @@ public class MenuVoluntario {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int op = 0;
-		int ban = -1;
+		String ban = "";
 		Aula a = new Aula();
 		while (op != 5) {
 			System.out.println("\nMENU:");
@@ -41,13 +41,12 @@ public class MenuVoluntario {
 				int aux;
 				do {
 					aux = (int) (Math.random() * a.getTamano());
-					if (aux != ban) {
-						ban = aux;
-						aux = -1;
-						a.getAlumnos().get(ban).sumarRepeticion();
-						a.mostrarRandom(ban);
+					if (!a.getAlumnos().get(aux).getNombre().equalsIgnoreCase(ban)) {
+						a.getAlumnos().get(aux).sumarRepeticion();
+						a.mostrarRandom(aux);
 					}
-				} while (aux == ban);
+				} while (a.getAlumnos().get(aux).getNombre().equalsIgnoreCase(ban));
+				ban = a.getAlumnos().get(aux).getNombre();
 				break;
 			case OPCION_SALIR:
 				break;

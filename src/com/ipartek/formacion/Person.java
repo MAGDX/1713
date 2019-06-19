@@ -10,7 +10,8 @@ package com.ipartek.formacion;
  *         persona indicando el nombre, la edad y el sexo
  *
  */
-public class Person {
+
+public class Person implements IAmigable {
 	// Atributos
 	private String nombre;
 	private int edad;
@@ -110,5 +111,10 @@ public class Person {
 
 	public String saludar() {
 		return "Hola, me llamo " + nombre;
+	}
+
+	@Override
+	public String despedir() {
+		return "Agur venur ta jan iogur.";
 	}
 }
