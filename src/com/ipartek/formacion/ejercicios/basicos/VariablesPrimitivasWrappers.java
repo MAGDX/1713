@@ -33,12 +33,13 @@ public class VariablesPrimitivasWrappers {
 		
 		int numeroParseado = Integer.parseInt("3");
 		System.out.printf("El rango de un int es %d - %d \n \n", Integer.MIN_VALUE, Integer.MAX_VALUE);
+		System.out.println(b + " " + s + " " + i + " " + l + " " + f + " " + d + " " + c + " " + boo + " " + numeroParseado);
 		
 		//indicar si el caracter introducido por pantalla es MAYUSCULAS, minusculas, letra o numero
 		Scanner sc = new Scanner(System.in);
 		char caracter;
 		
-		System.out.println("Inserte un numero: ");
+		System.out.println("Inserte un caracter: ");
 		caracter = sc.next().charAt(0);		
 		sc.close();
 		
