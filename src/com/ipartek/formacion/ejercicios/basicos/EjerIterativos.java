@@ -53,6 +53,7 @@ public class EjerIterativos {
 		for (i = 1; i <= n; i++) {
 			System.out.println(i);
 		}
+		sc.close();
 
 		sc = new Scanner(System.in);
 		System.out.println("Inserte un numero mayor que 1: ");
@@ -61,6 +62,7 @@ public class EjerIterativos {
 		while (i <= n) {
 			System.out.println(i++);
 		}
+		sc.close();
 
 		sc = new Scanner(System.in);
 		System.out.println("Inserte un numero mayor que 1: ");
@@ -69,6 +71,7 @@ public class EjerIterativos {
 		do {
 			System.out.println(i++);
 		} while (i <= n);
+		sc.close();
 
 		// Ejercicio 8
 		System.out.println("\nEjercicio 8");
@@ -77,6 +80,7 @@ public class EjerIterativos {
 		for (i = sc.nextInt(); i >= 1; i--) {
 			System.out.println(i);
 		}
+		sc.close();
 
 		sc = new Scanner(System.in);
 		System.out.println("Inserte un numero mayor que 1: ");
@@ -84,6 +88,7 @@ public class EjerIterativos {
 		while (i >= 1) {
 			System.out.println(i--);
 		}
+		sc.close();
 
 		sc = new Scanner(System.in);
 		System.out.println("Inserte un numero mayor que 1: ");
@@ -91,6 +96,7 @@ public class EjerIterativos {
 		do {
 			System.out.println(i--);
 		} while (i >= 1);
+		sc.close();
 
 		// Ejercicio 9
 		System.out.println("\nEjercicio 9");
@@ -118,6 +124,7 @@ public class EjerIterativos {
 		for (i = menor; i <= mayor; i++) {
 			System.out.println(i);
 		}
+		sc.close();
 
 		// Ejercicio 10
 		System.out.println("\nEjercicio 10");
@@ -140,6 +147,7 @@ public class EjerIterativos {
 				System.out.println(i);
 			}
 		}
+		sc.close();
 
 		// Ejercicio 11
 		System.out.println("\nEjercicio 11");
@@ -170,6 +178,7 @@ public class EjerIterativos {
 				System.out.println(i);
 			}
 		}
+		sc.close();
 
 		// Ejercicio 12
 		System.out.println("\nEjercicio 12");
@@ -192,6 +201,7 @@ public class EjerIterativos {
 			System.out.print("Introduce un número (0 para acabar): ");
 			n = sc.nextInt();
 		}
+		sc.close();
 
 		sc = new Scanner(System.in);
 		do {
@@ -210,6 +220,7 @@ public class EjerIterativos {
 				}
 			}
 		} while (n != 0);
+		sc.close();
 
 		sc = new Scanner(System.in);
 		String res;
@@ -234,6 +245,7 @@ public class EjerIterativos {
 				}
 			}
 		} while (n != 0);
+		sc.close();
 
 		// Ejercicio 13
 		System.out.println("\nEjercicio 13");
@@ -251,5 +263,6 @@ public class EjerIterativos {
 			}
 
 		} while (millas != 0);
+		sc.close();
 	}
 }

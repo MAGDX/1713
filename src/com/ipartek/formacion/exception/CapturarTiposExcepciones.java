@@ -14,7 +14,9 @@ import com.ipartek.formacion.PerroException;
  *
  */
 
+@SuppressWarnings("serial")
 public class CapturarTiposExcepciones extends Exception {
+	@SuppressWarnings("null")
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);

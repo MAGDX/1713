@@ -33,5 +33,7 @@ public class Ejercicio3 {
 		}
 		
 		Perro p = new Perro(nombre, edad, raza, vacunado);
+		System.out.println(p);
+		sc.close();
 	}
 }

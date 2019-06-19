@@ -22,5 +22,6 @@ public class EjerGnral1 {
 		n2 = aux;
 		System.out.println("Numero 1 con valor 2: " + n1);
 		System.out.println("Numero 2 con valor 1: " + n2);
+		sc.close();
 	}
 }

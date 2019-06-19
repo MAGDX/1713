@@ -22,5 +22,6 @@ public class EjerGnral2 {
 		}while((aux/10)!=0);
 		
 		System.out.println("El numero " + n + " tiene " + (cifras+1) + " cifras.");
+		sc.close();
 	}
 }

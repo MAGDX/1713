@@ -16,7 +16,7 @@ public class PropagacionException {
 		Perro p = new Perro();
 		p.setEdad(-1);
 		System.out.println(p);
-		//metodoB();
+		metodoB();
 		System.out.println("Termina metodoA");
 	}
 

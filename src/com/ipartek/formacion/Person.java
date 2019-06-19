@@ -29,6 +29,11 @@ public class Person {
 		this.ojos = "marrones";
 		this.genero = 'i';
 	}
+	
+	public Person(String nombre) {
+		this();
+		this.setNombre(nombre);
+	}
 
 	public Person(String nombre, int edad, char genero) {
 		this();
