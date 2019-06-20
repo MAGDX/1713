@@ -1,7 +1,6 @@
 package com.ipartek.formacion;
 
 import java.util.ArrayList;
-
 import java.util.Collections;
 
 public class Aula {
@@ -16,10 +15,10 @@ public class Aula {
 
 	public static void main(String[] args) {
 		Aula a = new Aula();
-		
+
 		// Generar numero aleatorio 0 - clase.length
 		int num = (int) (Math.random() * a.getTamano());
-		
+
 		a.mostrarRandom(num);
 	}
 
@@ -42,15 +41,15 @@ public class Aula {
 			System.out.println(i + 1 + ": " + alumnos.get(i).getNombre());
 		}
 	}
-	
+
 	public void mostrarAlumnosOrdenados() {
 		Collections.sort(alumnos);
-		
+
 		for (int i = 0; i < alumnos.size(); i++) {
 			System.out.println(i + 1 + ": " + alumnos.get(i).getNombre() + " " + alumnos.get(i).getRepeticiones());
 		}
 	}
-	
+
 	public ArrayList<Alumno> getAlumnos() {
 		return alumnos;
 	}
@@ -81,6 +80,7 @@ public class Aula {
 	public void anadirAlumno(String nombre) {
 		this.alumnos.add(new Alumno(nombre));
 	}
+
 	public int getTamano() {
 		return this.alumnos.size();
 	}
