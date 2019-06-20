@@ -2,7 +2,7 @@ package com.ipartek.formacion;
 
 import java.util.Scanner;
 
-public class MenuVoluntario {
+public class AppVoluntarios {
 	private static final int OPCION_LISTAR = 1;
 	private static final int OPCION_CREAR = 2;
 	private static final int OPCION_BORRAR = 3;
