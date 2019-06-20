@@ -21,7 +21,11 @@ public class AppVoluntarios {
 			System.out.println("3) Eliminar Alumno");
 			System.out.println("4) Buscar Voluntario");
 			System.out.println("5) Salir");
-			op = Integer.parseInt(sc.nextLine());
+			try{
+				op = Integer.parseInt(sc.nextLine());
+			}catch(Exception e) {
+				op = 6;
+			}
 
 			switch (op) {
 			case OPCION_LISTAR:
@@ -51,7 +55,7 @@ public class AppVoluntarios {
 			case OPCION_SALIR:
 				break;
 			default:
-				System.out.println("Numero incorrecto. Rango 1-5");
+				System.out.println("Entrada no valida. Vuelva a intentarlo... Rango 1-5");
 				break;
 			}
 		}
