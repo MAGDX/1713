@@ -25,6 +25,7 @@ public class FicherosEjemplos {
 		String lineaSimulada = "1;Manolo;12;verdes;mucho";
 		
 		String[] campos = lineaSimulada.split(";");
+		System.out.println(campos);
 		
 		System.out.println("Fichero guardado");
 		

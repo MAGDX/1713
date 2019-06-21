@@ -5,9 +5,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.util.ArrayList;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -35,7 +32,7 @@ public class DAOAlumnoArrayListTest {
 	}
 
 	@After
-	public void tearDown() throws Exception {		
+	public void tearDown() throws Exception {
 		for (int i = 0; i < dao.getAll().size(); i++) {
 			dao.delete(dao.getAll().get(i).getId());
 		}
