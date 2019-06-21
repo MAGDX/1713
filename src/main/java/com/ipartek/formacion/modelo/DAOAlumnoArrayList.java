@@ -8,11 +8,23 @@ import com.ipartek.formacion.Alumno;
 public class DAOAlumnoArrayList implements IPersistible<Alumno> {
 
 	// Parametros
+	private static DAOAlumnoArrayList INSTANCE;
 	private ArrayList<Alumno> lista;
 
+	/**
+	 * Encargado de devolver solo 1 objeto, patron Singleton
+	 * 
+	 * @return Devuelve la instancia de la clase, en caso de que sea null, la crea.
+	 */
+	public static synchronized DAOAlumnoArrayList getInstance() {
+		if (INSTANCE == null) {
+			INSTANCE = new DAOAlumnoArrayList();
+		}
+		return INSTANCE;
+	}
+
 	// Constructores
-	public DAOAlumnoArrayList() {
-		super();
+	private DAOAlumnoArrayList() {
 		this.lista = new ArrayList<Alumno>();
 	}
 
@@ -36,22 +48,39 @@ public class DAOAlumnoArrayList implements IPersistible<Alumno> {
 
 	@Override
 	public boolean insert(Alumno a) {
-		return lista.add(a);
+		boolean exito;
+		if (a == null) {
+			exito = false;
+		} else {
+			lista.add(a);
+			exito = true;
+		}
+		return exito;
 	}
 
 	@Override
 	public boolean delete(int id) {
-		return lista.remove(getById(id));
+		boolean exito;
+		if (getById(id) == null) {
+			exito = false;
+		} else {
+			lista.remove(getById(id));
+			exito = true;
+		}
+		return exito;
 	}
 
 	@Override
 	public boolean update(Alumno a) {
 		boolean res = false;
-		for (int i = 0; i < lista.size(); i++) {
-			if (a.getId() == lista.get(i).getId()) {
-				lista.set(i, a);
-				res = true;
-				break;
+		
+		if (a != null) {
+			for (int i = 0; i < lista.size(); i++) {
+				if (a.getId() == lista.get(i).getId()) {
+					lista.set(i, a);
+					res = true;
+					break;
+				}
 			}
 		}
 

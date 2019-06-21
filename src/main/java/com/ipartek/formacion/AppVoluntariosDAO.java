@@ -13,17 +13,16 @@ public class AppVoluntariosDAO {
 	private static final int OPCION_BORRAR = 3;
 	private static final int OPCION_BUSCAR = 4;
 	private static final int OPCION_SALIR = 5;
-	private static DAOAlumnoArrayList dao;
 	private static Scanner sc;
 	private static String ban = "";
 	private static int ultimoId;
+	private static DAOAlumnoArrayList dao = DAOAlumnoArrayList.getInstance();
 
 	// Main
 	public static void main(String[] args) {
 		sc = new Scanner(System.in);
 		int op = 0;
 		ban = "";
-		dao = new DAOAlumnoArrayList();
 		inicializarLista();
 		while (op != 5) {
 			op = pintarMenu();
@@ -112,7 +111,7 @@ public class AppVoluntariosDAO {
 
 	public static void borrarAlumno() {
 		mostrarAlumnos();
-		System.out.println("¿Que Alumno desea eliminar?");
+		System.out.println("ï¿½Que Alumno desea eliminar?");
 		try {
 			int pos = Integer.parseInt(sc.nextLine());
 			Alumno aEliminar = dao.getAll().get(pos - 1);
