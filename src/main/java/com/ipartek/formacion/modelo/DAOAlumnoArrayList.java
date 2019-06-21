@@ -86,4 +86,22 @@ public class DAOAlumnoArrayList implements IPersistible<Alumno> {
 
 		return res;
 	}
+	
+	public void inicializarLista() {
+		this.insert(new Alumno(this.getAll().size(), "Andoni"));
+		this.insert(new Alumno(this.getAll().size(), "Arkaitz"));
+		this.insert(new Alumno(this.getAll().size(), "Eder S"));
+		this.insert(new Alumno(this.getAll().size(), "Veronica"));
+		this.insert(new Alumno(this.getAll().size(), "Asier"));
+		this.insert(new Alumno(this.getAll().size(), "Jon A"));
+		this.insert(new Alumno(this.getAll().size(), "Jose Luis"));
+		this.insert(new Alumno(this.getAll().size(), "Eder I"));
+		this.insert(new Alumno(this.getAll().size(), "Manuel"));
+		this.insert(new Alumno(this.getAll().size(), "Aritz"));
+		this.insert(new Alumno(this.getAll().size(), "Mournir"));
+		this.insert(new Alumno(this.getAll().size(), "Gaizka"));
+		this.insert(new Alumno(this.getAll().size(), "Borja"));
+		this.insert(new Alumno(this.getAll().size(), "Jon C"));
+		this.insert(new Alumno(this.getAll().size(), "Ander"));
+	}
 }

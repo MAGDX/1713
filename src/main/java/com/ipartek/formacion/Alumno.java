@@ -1,6 +1,8 @@
 package com.ipartek.formacion;
 
-public class Alumno extends Person implements Comparable<Alumno> {
+import java.io.Serializable;
+
+public class Alumno extends Person implements Comparable<Alumno>, Serializable {
 	//Parametros
 	private int repeticiones;
 	

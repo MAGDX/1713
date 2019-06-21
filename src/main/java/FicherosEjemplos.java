@@ -1,34 +1,55 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
-import com.ipartek.formacion.Person;
+import com.ipartek.formacion.Alumno;
+import com.ipartek.formacion.modelo.DAOAlumnoArrayList;
 
 public class FicherosEjemplos {
 
-	public static void main(String[] args) throws IOException {
-		String ficheroNombrePersonas =  "C:\\1713\\eclipse-workspace\\1713\\personas.txt";
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
+		String ficheroNombrePersonas = "C:\\1713\\eclipse-workspace\\1713\\alumnos.txt";
+		DAOAlumnoArrayList dao = DAOAlumnoArrayList.getInstance();
+		dao.inicializarLista();
 		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(ficheroNombrePersonas));
-		oos.writeObject( new Person("MAnolito") );
-		oos.flush();
-		
-		//TODO leer objketo del fichero
-		//@see http://www.chuidiang.org/java/ficheros/ObjetosFichero.php
-		
+		for (Alumno a : dao.getAll()) {
+			oos.writeObject(a);
+
+		}
+		//oos.flush(); // Limpiamos el buffer para que no desborde
+		//oos.reset();
 		oos.close();
+
+		// TODO leer objketo del fichero
+		// @see http://www.chuidiang.org/java/ficheros/ObjetosFichero.php
+
+		ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ficheroNombrePersonas));
+		// Se lee el primer objeto
+		Object aux;
+
+		// Mientras haya objetos
+		while ((aux = ois.readObject())!=null){
+			if (aux instanceof Alumno) {
+				System.out.println(aux); // Se escribe en pantalla el objeto
+			}
+		}
 		
-		String lineaSimulada = "1;Manolo;12;verdes;mucho";
-		
+		ois.close();
+
+		/*String lineaSimulada = "1;Manolo;12;verdes;mucho";
+
 		String[] campos = lineaSimulada.split(";");
 		System.out.println(campos);
-		
+
 		System.out.println("Fichero guardado");
-		
+
 		System.out.println("Ejercicio ficheros");
 
 		Scanner sc = new Scanner(System.in);
@@ -38,7 +59,7 @@ public class FicherosEjemplos {
 		String linea1 = sc.nextLine();
 		System.out.println("Escribe otra linea: ");
 		String linea2 = sc.nextLine();
-		
+
 		sc.close();
 
 		FileWriter fw = new FileWriter(ficheroNombre);
@@ -55,9 +76,9 @@ public class FicherosEjemplos {
 		while ((linea = br.readLine()) != null) {
 			System.out.println(linea);
 		}
-		
+
 		br.close();
-		
-		System.out.println("Terminamos de leer");
+
+		System.out.println("Terminamos de leer");*/
 	}
 }

@@ -1,5 +1,7 @@
 package com.ipartek.formacion;
 
+import java.io.Serializable;
+
 /**
  * 
  * @author Arkaitz Marcos
@@ -11,7 +13,7 @@ package com.ipartek.formacion;
  *
  */
 
-public class Person implements IAmigable {
+public class Person implements IAmigable, Serializable {
 	// Atributos
 	private int id;
 	private String nombre;
