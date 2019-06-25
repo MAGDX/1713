@@ -16,7 +16,6 @@ public class FicherosEjemplos {
 		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(ficheroNombrePersonas));
 		for (Alumno a : dao.getAll()) {
 			oos.writeObject(a);
-
 		}
 		// oos.flush(); // Limpiamos el buffer para que no desborde
 		// oos.reset();
