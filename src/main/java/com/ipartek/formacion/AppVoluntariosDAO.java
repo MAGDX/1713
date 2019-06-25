@@ -111,7 +111,7 @@ public class AppVoluntariosDAO {
 
 	public static void borrarAlumno() {
 		mostrarAlumnos();
-		System.out.println("�Que Alumno desea eliminar?");
+		System.out.println("¿Que Alumno desea eliminar?");
 		try {
 			int pos = Integer.parseInt(sc.nextLine());
 			Alumno aEliminar = dao.getAll().get(pos - 1);

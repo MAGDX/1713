@@ -38,7 +38,7 @@ public class AppVoluntarios {
 				break;
 			case OPCION_BORRAR:
 				a.mostrarAlumnos();
-				System.out.println("¿Que Alumno desea eliminar?");
+				System.out.println("Â¿Que Alumno desea eliminar?");
 				a.borrarAlumno((Integer.parseInt(sc.nextLine()) - 1));
 				break;
 			case OPCION_BUSCAR:
