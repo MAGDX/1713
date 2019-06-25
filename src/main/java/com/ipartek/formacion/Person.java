@@ -13,6 +13,7 @@ import java.io.Serializable;
  *
  */
 
+@SuppressWarnings("serial")
 public class Person implements IAmigable, Serializable {
 	// Atributos
 	private int id;

@@ -3,6 +3,7 @@ package com.ipartek.formacion;
 import java.text.DecimalFormat;
 import java.util.Date;
 
+@SuppressWarnings("serial")
 public class Employee extends Person {
 
 	// Atributos

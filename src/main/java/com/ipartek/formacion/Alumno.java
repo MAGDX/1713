@@ -2,6 +2,7 @@ package com.ipartek.formacion;
 
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class Alumno extends Person implements Comparable<Alumno>, Serializable {
 	//Parametros
 	private int repeticiones;

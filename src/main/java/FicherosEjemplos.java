@@ -1,13 +1,8 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.Scanner;
 
 import com.ipartek.formacion.Alumno;
 import com.ipartek.formacion.modelo.DAOAlumnoArrayList;
@@ -23,8 +18,8 @@ public class FicherosEjemplos {
 			oos.writeObject(a);
 
 		}
-		//oos.flush(); // Limpiamos el buffer para que no desborde
-		//oos.reset();
+		// oos.flush(); // Limpiamos el buffer para que no desborde
+		// oos.reset();
 		oos.close();
 
 		// TODO leer objketo del fichero
@@ -35,50 +30,44 @@ public class FicherosEjemplos {
 		Object aux;
 
 		// Mientras haya objetos
-		while ((aux = ois.readObject())!=null){
+		while ((aux = ois.readObject()) != null) {
 			if (aux instanceof Alumno) {
 				System.out.println(aux); // Se escribe en pantalla el objeto
 			}
 		}
-		
+
 		ois.close();
 
-		/*String lineaSimulada = "1;Manolo;12;verdes;mucho";
-
-		String[] campos = lineaSimulada.split(";");
-		System.out.println(campos);
-
-		System.out.println("Fichero guardado");
-
-		System.out.println("Ejercicio ficheros");
-
-		Scanner sc = new Scanner(System.in);
-		String ficheroNombre = "C:\\1713\\eclipse-workspace\\1713\\ejemplo.txt";
-
-		System.out.println("Escribe algo: ");
-		String linea1 = sc.nextLine();
-		System.out.println("Escribe otra linea: ");
-		String linea2 = sc.nextLine();
-
-		sc.close();
-
-		FileWriter fw = new FileWriter(ficheroNombre);
-		BufferedWriter bf = new BufferedWriter(fw);
-		bf.write(linea1);
-		bf.newLine();
-		bf.write(linea2);
-
-		bf.close();
-
-		BufferedReader br = new BufferedReader(new FileReader(ficheroNombre));
-
-		String linea;
-		while ((linea = br.readLine()) != null) {
-			System.out.println(linea);
-		}
-
-		br.close();
-
-		System.out.println("Terminamos de leer");*/
+		/*
+		 * String lineaSimulada = "1;Manolo;12;verdes;mucho";
+		 * 
+		 * String[] campos = lineaSimulada.split(";"); System.out.println(campos);
+		 * 
+		 * System.out.println("Fichero guardado");
+		 * 
+		 * System.out.println("Ejercicio ficheros");
+		 * 
+		 * Scanner sc = new Scanner(System.in); String ficheroNombre =
+		 * "C:\\1713\\eclipse-workspace\\1713\\ejemplo.txt";
+		 * 
+		 * System.out.println("Escribe algo: "); String linea1 = sc.nextLine();
+		 * System.out.println("Escribe otra linea: "); String linea2 = sc.nextLine();
+		 * 
+		 * sc.close();
+		 * 
+		 * FileWriter fw = new FileWriter(ficheroNombre); BufferedWriter bf = new
+		 * BufferedWriter(fw); bf.write(linea1); bf.newLine(); bf.write(linea2);
+		 * 
+		 * bf.close();
+		 * 
+		 * BufferedReader br = new BufferedReader(new FileReader(ficheroNombre));
+		 * 
+		 * String linea; while ((linea = br.readLine()) != null) {
+		 * System.out.println(linea); }
+		 * 
+		 * br.close();
+		 * 
+		 * System.out.println("Terminamos de leer");
+		 */
 	}
 }
