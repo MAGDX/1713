@@ -1,0 +1,21 @@
+<!-- estaria bien haber puesto .DTD y prologo -->
+<perros>
+	<perro>
+		<nombre>Bubba</nombre>
+		<edad>4</edad>
+		<raza>Boxer</raza>
+		<vacunado>SI</vacunado>
+	</perro>
+	<perro>
+		<nombre>Pulgas</nombre>
+		<edad>2</edad>
+		<raza>Yorkshire</raza>
+		<vacunado>NO</vacunado>
+	</perro>
+	<perro>
+		<nombre>Tobby</nombre>
+		<edad>1</edad>
+		<raza>Chihuahua</raza>
+		<vacunado>SI</vacunado>
+	</perro>
+</perros>
